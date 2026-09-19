@@ -455,18 +455,5 @@ https://github.com/Sadam-Alvi
 
 ---
 
-# 📄 License
-
-This project is intended for educational and demonstration purposes.
-
-````
-
-One thing I would **definitely change before pushing this to GitHub**: if your current `main.py` contains:
-
-```python
-password="sadam"
-````
-
-
 #   S i r a - c h a t b o t  
  
