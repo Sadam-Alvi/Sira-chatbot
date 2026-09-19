@@ -1,0 +1,433 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #faf9f6;
+    color: #171717;
+}
+
+
+/* Navbar */
+
+.navbar {
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: #faf9f6;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #e85d04;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #e85d04;
+}
+
+.order-btn,
+.menu-btn {
+    border: none;
+    background: #e85d04;
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 25px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 7%;
+
+    gap: 60px;
+
+    background: #f2eee7;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.small-title {
+    color: #e85d04;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 6vw, 82px);
+
+    line-height: 0.95;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #e85d04;
+}
+
+.hero-text {
+    max-width: 450px;
+
+    color: #666;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 520px;
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: 30px;
+
+    transform: rotate(2deg);
+}
+
+
+/* Menu */
+
+.menu {
+    padding: 90px 7%;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+}
+
+.section-heading > p {
+    color: #777;
+}
+
+
+/* Food Grid */
+
+.food-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Food Card */
+
+.food-card {
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Food Image */
+
+.food-image {
+    height: 220px;
+
+    overflow: hidden;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+.food-card:hover .food-image img {
+    transform: scale(1.06);
+}
+
+
+/* Food Info */
+
+.food-info {
+    padding: 20px;
+}
+
+.food-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.food-top h3 {
+    font-size: 20px;
+}
+
+.food-top span {
+    color: #e85d04;
+
+    font-weight: 700;
+}
+
+.food-info p {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    min-height: 45px;
+
+    margin-bottom: 18px;
+}
+
+
+/* Add Button */
+
+.add-btn {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #e85d04;
+
+    background: transparent;
+
+    color: #e85d04;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.add-btn:hover {
+    background: #e85d04;
+
+    color: white;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 35px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-top: 1px solid #ddd;
+
+    color: #777;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .food-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .section-heading {
+        align-items: start;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+    .menu {
+        padding: 60px 5%;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   Sira Chatbot
+========================= */
+
+.chatbot {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 350px;
+    height: 430px;
+
+    z-index: 1000;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+
+    background: white;
+}
+
+.chatbot iframe {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .chatbot {
+        right: 10px;
+        bottom: 10px;
+
+        width: calc(100% - 20px);
+        height: 450px;
+    }
+
+}
+
